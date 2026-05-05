@@ -131,8 +131,7 @@ select  `Customer ID` ,str_to_date(`order date`,'%m/%d/%Y')as order_date from pr
 select `customer ID`,max(order_date)as last_date,min(order_date)as first_date from purchase_date group by `Customer ID`;
 
 /*For each product, calculate the average profit over time and compare it to its current sale's profit.*/
-WITH average_profit AS (
-    SELECT 
+WITH SELECT 
         `Product ID`,
         AVG(Profit) AS avg_profit 
     FROM 
